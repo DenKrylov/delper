@@ -14,7 +14,9 @@ export const Root = () => {
       <CssBaseline />
       <Header open={open} handleDrawerOpen={() => setOpen(true)} />
       <NavBar theme={theme} open={open} handleDrawerClose={() => setOpen(false)} />
-      <Outlet />
+      <Box marginTop={10} marginLeft={4} sx={{ display: "flex" }}>
+        <Outlet />
+      </Box>
     </Box>
   )
 }

@@ -5,6 +5,9 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ErrorPage } from './routes/ErrorPage';
 import { ToDo } from './routes/ToDo';
 import { Root } from './routes/Root';
+import { Kanban } from './components/Kanban/Kanban';
+import { Widgets } from './components/Widgets/Widgets';
+import { Calendar } from './components/Calendar/Calendar';
 
 const router = createBrowserRouter([
   {
@@ -13,8 +16,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "Widgets",
+        element: <Widgets />,
+      },
+      {
         path: "to-do",
         element: <ToDo />,
+      },
+      {
+        path: "kanban",
+        element: <Kanban />,
+      },
+      {
+        path: "calendar",
+        element: <Calendar />,
       },
     ]
   },
